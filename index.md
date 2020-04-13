@@ -13,8 +13,4 @@ layout: page
 <br>
 <br>
 
-<h4>
-Insert text here
-</h4>
-
 </center>
