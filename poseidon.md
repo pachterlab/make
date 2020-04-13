@@ -6,44 +6,15 @@ group: navigation
 
 {% include JB/setup %}
 
-The poseidon GUI was created using [Qt designer](http://doc.qt.io/qt-5/qtdesigner-manual.html), a drag and drop application for organizing buttons that allows the used to easily make modifications. This GUI is used to interface with a Python script that controls both the microscope and Arduino via USB. 
+#### Overview
 
-The pumps are driven by an Arduino board that interprets commands sent via USB and sends the proper signal to control the stepper motor movement. The user can take advantage of this by developing custom movement patterns using the Arduino functions.
+The poseidon syringe pump is an open source alternative to commercial systems. It costs less than $50 and can be assembled in under 20 minutes. The poseidon pump (poseidon v1) was originally designed for microfluidics applications such as droplet based single-cell RNA-seq, and was published in:
 
-![poseidon_gui](https://user-images.githubusercontent.com/12504176/51095267-6f214600-1768-11e9-83d6-207cb360bdec.png)
+Booeshaghi, A. Sina, Eduardo da Veiga Beltrame, Dylan Bannon, Jase Gehring, and Lior Pachter. "[Principles of open source bioinstrumentation applied to the poseidon syringe pump system](https://www.nature.com/articles/s41598-019-48815-9)." Scientific reports 9, no. 1 (2019): 1-8
 
+A second version of the pump (poseidon v2) is under design, and includes the option for several sensors, including end stops, a force-sensitive resistor, and a positional encoder. The revised pump is being developed in collaboration with [JOGL](https://app.jogl.io/) to undergo [testing and validation by AP-HP teams](https://app.jogl.io/project/185), The goal is to develop a medical grade syringe pump that can be used in intensive care units that require large number of syringe pumps to treat novel coronavirus patients.
 
-## Getting started 
-
- 
- <div style="position:relative;padding-top:56.25%;">
-  <iframe src="https://www.youtube.com/embed/VmoB_fPc4L4" frameborder="0" allowfullscreen
-    style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-</div>
-
-&nbsp;
-
-
-To run the poseidon GUI controller you have the option of either running from the source code in Python or choosing the appropriate binary file from the [poseidon releases page](https://github.com/pachterlab/poseidon/releases) and executing it. 
-
-The Python scripts are available in the repository [`SOFTWARE` folder](https://github.com/pachterlab/poseidon/tree/release/SOFTWARE). The two Python scripts needed are `poseidon_main.py` and `poseidon_controller_gui.py`.
-
-Before you can run the GUI controller, the Arduino should be flashed with the [`arduino_serialCOM_v0.1.ino` sketch](https://github.com/pachterlab/poseidon/tree/release/SOFTWARE/arduino_serialCOM_v0.1), available the `SOFTWARE` folder.
-
-For directions on how to flash an arduino please refer to the official guide: [https://www.arduino.cc/en/Guide/HomePage](https://www.arduino.cc/en/Guide/HomePage)
-
-
-### Startup Checklist
-Before starting the Python controller, make sure
-1. The Arduino has the firmware uploaded to it
-2. The Arduino is connected via USB to the computer or Rapsberry Pi microscope
-3. You have appropriately placed jumpers on the CNC Sheild to allow for microstepping and hardware enabling, as shown in the [arduino CNC shield build video](https://pachterlab.github.io/poseidon/hardware).
-4. The CNC shield is powered, and that all motors are plugged in to the CNC sheild
-
-A schematic of how the system parts connect is shown below.
-
-![poseidon_setup](https://user-images.githubusercontent.com/12504176/51095573-9d078a00-176a-11e9-9fa8-dbe915b4b94e.png)
-
+![poseidon overview](poseidon_overview.jpg){:class="img-responsive"}
 
 
 #### License
