@@ -8,7 +8,7 @@ group: navigation
 
 #### Overview
 
-The poseidon syringe pump is an open source alternative to commercial systems. It costs less than $50 and can be assembled in under 20 minutes. The poseidon pump (poseidon v1) was originally designed for microfluidics applications such as droplet based single-cell RNA-seq, and was published in:
+The poseidon syringe pump (poseidon v1) is an open source alternative to commercial systems. It costs less than $50 and can be assembled in under 20 minutes. The pump is part of the poseidon syringe pump system that was originally designed for microfluidics applications such as droplet based single-cell RNA-seq, and was published in:
 
 Booeshaghi, A. Sina, Eduardo da Veiga Beltrame, Dylan Bannon, Jase Gehring, and Lior Pachter. "[Principles of open source bioinstrumentation applied to the poseidon syringe pump system](https://www.nature.com/articles/s41598-019-48815-9)." Scientific reports 9, no. 1 (2019): 1-8
 
